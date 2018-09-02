@@ -1,0 +1,24 @@
+/* components/like/index.wxss */
+.container{
+  /* 设置为display:flex,父元素并不会变成块级元素 */
+  /* 设置为diaplay:inline-flex,为自适应块级元素 */
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10rpx;
+}
+
+.container image{
+  /* 小程序中以苹果6尺寸为准换算2px=1rpx */
+  width: 32rpx;
+  height: 28rpx;
+}
+
+.container text{
+  font-size: 24rpx;
+  /* 消除文字上下间隙 */
+  line-height: 24rpx;
+  color: #bbbbbb;
+  position: relative;
+  bottom: 10rpx;
+  left: 6rpx;
+}

@@ -1,0 +1,8 @@
+<!-- bind:tap 或 catch:tap监听点击事件 -->
+<view bind:tap="onLike" class="container">
+  <image src="{{like?yesSrc:noSrc}}" class=""/>
+  <!-- {{}} 展示数据 数据绑定 -->
+  <!-- <text>{{count}}</text> -->
+  <!-- 三元表达式 -->
+  <text>{{like?count1:count2}}</text>
+</view>

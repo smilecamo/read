@@ -1,0 +1,8 @@
+page{
+  /* 全局样式 */
+  /* 小程序外部会有一个page */
+  /* 不是所有元素都能继承 */
+  /* 平方思源字体 */
+  font-family: "PingFangSC-Thin";
+  font-size: 32rpx;
+}
