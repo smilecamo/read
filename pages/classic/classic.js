@@ -1,6 +1,8 @@
 import { ClassicModel } from '../../model/classic.js'
+// import { LikeModel } from '../../model/like.js'
 // 实例化对象
 let classic = new ClassicModel()
+// let LikeModel = new LikeModel()
 Page({
 
   /**
@@ -24,7 +26,12 @@ Page({
       })
     })
   },
-
+  // 自定义事件
+  onLike: function(event) {
+    // 获取是否喜欢
+    let behavior = event.detail.behavior
+    // LikeModel(behavior, this.data.classic.id,this.data.classic.type)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -23,7 +23,7 @@ class HTTP {
         // startsWith:以什么开头
         // endsWith
         if(code.startsWith('2')){
-          params.success(res.data)
+          params.success && params.success(res.data)
         }else{
           // 
           let error_code = res.data.error_code

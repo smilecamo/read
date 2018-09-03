@@ -1,5 +1,5 @@
-<view >
-  <image  />
-  <image  />
-  <text ></text>
+<view class="classic-container">
+  <image class="classic-img" src="{{img}}"/>
+  <image class="tag" src='images/movie@tag.png'/>
+  <text class="text">{{text}}</text>
 </view>

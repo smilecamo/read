@@ -1,4 +1,17 @@
-<v-like 
-  like="{{classic.hasPromo}}"
-  count="{{classic.lid}}"
+<view class="header">
+  <v-epsoide
+    class="epsoide"
+    index="{{classic.ms[0].cC}}"
   />
+  <v-like
+    class="like"
+    bind:like="onLike"
+    like="{{classic.hasPromo}}"
+    count="{{classic.lid}}"
+  />
+</view>
+<v-movie
+  img="{{classic.ms[0].img}}"
+  text="{{classic.ms[0].commonSpecial}}"
+></v-movie>
+<v-navi></v-navi>
