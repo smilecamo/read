@@ -1,9 +1,12 @@
-// pages/classic/classic.js
+import { ClassicModel } from '../../model/classic.js'
+// 实例化对象
+let classic = new ClassicModel()
 Page({
 
   /**
    * 页面的初始数据
    */
+  // data 中数据 wxml 可以直接使用
   data: {
 
   },
@@ -12,7 +15,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // wx.request 异步
+    classic.getLatest((res) => {
+      console.log(res);
+      // 数据更新   this.setData设置更新数据
+      this.setData({
+        classic: res
+      })
+    })
   },
 
   /**

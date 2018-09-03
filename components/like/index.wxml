@@ -4,5 +4,5 @@
   <!-- {{}} 展示数据 数据绑定 -->
   <!-- <text>{{count}}</text> -->
   <!-- 三元表达式 -->
-  <text>{{like?count1:count2}}</text>
+  <text>{{count}}</text>
 </view>

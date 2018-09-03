@@ -1,1 +1,4 @@
-<v-like />
+<v-like 
+  like="{{classic.hasPromo}}"
+  count="{{classic.lid}}"
+  />
