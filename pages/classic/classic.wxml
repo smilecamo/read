@@ -11,7 +11,7 @@
       count="{{classic.lid}}"
     />
   </view>
-  <!-- <v-movie
+  <v-movie
     hidden="{{num%2 === 1?true:false}}"
     img="{{classic.img}}"
     content="{{classic.commonSpecial}}"
@@ -20,11 +20,11 @@
     hidden="{{num%2 === 0?true:false}}"
     img="{{classic.img}}"
     content="{{classic.commonSpecial}}"
-  ></v-essay> -->
-  <v-music
+  ></v-essay>
+  <!-- <v-music
     img="{{classic.img}}"
     content="{{classic.commonSpecial}}"
-  />
+  /> -->
   <v-navi
     class="navi"
     bind:left="onPrevious"
