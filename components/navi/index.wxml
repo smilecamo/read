@@ -1,6 +1,12 @@
 
 <view class="container">
-  <image class="icon" src="{{late?disLeftSrc:leftSrc}}" />
+  <image
+    bind:tap="onLeft"
+    class="icon"
+    src="{{next?disLeftSrc:leftSrc}}" />
   <text class="text">{{text}}</text>
-  <image class="icon" src="{{first?disRightSrc:rightSrc}}" />
+  <image
+    bind:tap="onRight"
+    class="icon"
+    src="{{first?disRightSrc:rightSrc}}" />
 </view>

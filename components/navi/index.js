@@ -6,7 +6,7 @@ Component({
   properties: {
     text: String,
     first: Boolean,
-    latest: Boolean
+    next: Boolean
   },
 
   /**
@@ -23,6 +23,16 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    onLeft:function() {
+      if(!this.properties.next){
+        // 触发自定义事件
+        this.triggerEvent('left', {}, {})
+      }
+    },
+    onRight:function() {
+      if(!this.properties.first){
+        this.triggerEvent('right', {}, {})
+      }
+    }
   }
 })

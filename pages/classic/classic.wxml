@@ -1,17 +1,36 @@
-<view class="header">
-  <v-epsoide
-    class="epsoide"
-    index="{{classic.ms[0].cC}}"
+<view class="container">
+  <view class="header">
+    <v-epsoide
+      class="epsoide"
+      index="{{classic.cC}}"
+    />
+    <v-like
+      class="like"
+      bind:like="onLike"
+      like="{{classic.hasPromo}}"
+      count="{{classic.lid}}"
+    />
+  </view>
+  <!-- <v-movie
+    hidden="{{num%2 === 1?true:false}}"
+    img="{{classic.img}}"
+    content="{{classic.commonSpecial}}"
+  ></v-movie>
+  <v-essay
+    hidden="{{num%2 === 0?true:false}}"
+    img="{{classic.img}}"
+    content="{{classic.commonSpecial}}"
+  ></v-essay> -->
+  <v-music
+    img="{{classic.img}}"
+    content="{{classic.commonSpecial}}"
   />
-  <v-like
-    class="like"
-    bind:like="onLike"
-    like="{{classic.hasPromo}}"
-    count="{{classic.lid}}"
-  />
+  <v-navi
+    class="navi"
+    bind:left="onPrevious"
+    bind:right="onNext"
+    text="{{classic.t}}"
+    first="{{first}}"
+    next="{{next}}"
+  ></v-navi>
 </view>
-<v-movie
-  img="{{classic.ms[0].img}}"
-  text="{{classic.ms[0].commonSpecial}}"
-></v-movie>
-<v-navi></v-navi>
