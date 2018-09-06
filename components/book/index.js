@@ -13,11 +13,15 @@ Component({
   data: {
 
   },
-
   /**
    * 组件的方法列表
    */
   methods: {
-
+    jump() {
+      const bid = this.properties.book.id
+      wx.navigateTo({
+        url: `/pages/book-detail/book-detail?movield=${bid}`
+      })
+    }
   }
 })

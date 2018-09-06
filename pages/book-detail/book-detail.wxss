@@ -1,0 +1,56 @@
+/* pages/book-detail/book-detail.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feader{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffffff;
+}
+
+.feader image{
+  width: 240rpx;
+  height: 360rpx;
+  border-radius: 6rpx;
+}
+
+.feader text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20rpx;
+}
+
+.feader-content-name{
+  font-size: 38rpx;
+  color: blueviolet;
+  font-weight: 800;
+}
+
+.introduction{
+  font-size: 38rpx;
+  font-weight: 800;
+  color: #ff8600;
+  padding: 20rpx 0;
+}
+
+.story{
+  width: 100%;
+  font-size: 32rpx;
+  color: #333333;
+  text-indent:2em;
+  border-top: 1px #eeeeee solid;
+  background: #ffffff;
+}
+
+.story text {
+  width: 50%;
+  text-align: center
+}

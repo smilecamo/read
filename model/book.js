@@ -11,6 +11,15 @@ class BookModel extends HTTP {
         },
     })
   }
+  getDetail(bid) {
+    return this.request1({
+      url: '/movie/detail.api',
+      data: {
+        locationId: 290,
+        movieId: bid
+        },
+    })
+  }
 }
 
 export {

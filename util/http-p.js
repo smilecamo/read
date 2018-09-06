@@ -1,6 +1,6 @@
 // 封装http请求
 import {
-  config
+  config,config1
 } from '../config.js'
 
 const tips = {
@@ -13,9 +13,42 @@ class HTTP {
       this._request(url, resolve, reject, data , method)
     })
   }
+  request1({url, data = {}, method = "GET"}) {
+    return new Promise((resolve, reject) => {
+      this._request1(url, resolve, reject, data , method)
+    })
+  }
   _request(url, resolve, reject, data = {}, method = "GET") {
     wx.request({
       url: config.api_base_url + url,
+      method: method,
+      data: data,
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        // 获取状态码
+        let code = res.statusCode.toString()
+        // startsWith:以什么开头
+        // endsWith
+        if (code.startsWith('2')) {
+          resolve(res.data)
+        } else {
+          // 
+          reject()
+          let error_code = res.data.error_code
+          this._show_err(403)
+        }
+      },
+      fail: (err) => {
+        reject()
+        this._show_err(1)
+      }
+    })
+  }
+  _request1(url, resolve, reject, data = {}, method = "GET") {
+    wx.request({
+      url: config1.api_base_url + url,
       method: method,
       data: data,
       header: {

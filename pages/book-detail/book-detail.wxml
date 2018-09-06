@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="feader">
+    <image class="" src="{{detail.basic.img}}" />
+    <view class="feader-content">
+    <text class="feader-content-name">片名:{{detail.basic.name}}</text>
+    <text class="feader-content-category">类别:{{detail.basic.type[0]}}/{{detail.basic.type[1]}}/{{detail.basic.type[2]}}</text>
+    <text class="feader-content-time">时长:{{detail.basic.mins}}</text>
+    <text class="eader-content-released">上映:{{detail.basic.releaseArea}}{{detail.basic.releaseDate}}</text>
+    </view>
+  </view>
+  <text class="introduction">{{detail.basic.commentSpecial}}</text>
+  <view class="story">
+    <text >{{detail.basic.story}}</text>
+    </view>
+</view>
